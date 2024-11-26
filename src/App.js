@@ -5,7 +5,7 @@ import Step2 from './pages/Step2';
 import Step3 from './pages/Step3';
 
 const App = () => {
-  const { step, prevStep, resetFormData } = useFormStore();
+  const { step } = useFormStore();
 
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center">
@@ -23,17 +23,6 @@ const App = () => {
         {step === 1 && <Step1 />}
         {step === 2 && <Step2 />}
         {step === 3 && <Step3 />}
-
-        {step > 1 && (
-          <button onClick={prevStep} className="btn-secondary">
-            Back
-          </button>
-        )}
-        {step === 3 && (
-          <button onClick={resetFormData} className="btn-danger">
-            Reset Form
-          </button>
-        )}
       </div>
     </div>
   );
