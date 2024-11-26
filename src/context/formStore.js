@@ -7,5 +7,6 @@ const useFormStore = create((set) => ({
   prevStep: () => set((state) => ({ step: state.step - 1 })),
   updateFormData: (data) =>
     set((state) => ({ formData: { ...state.formData, ...data } })),
+  resetFormData: () => set({ formData: {} }),
 }));
 export default useFormStore;
