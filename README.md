@@ -1,6 +1,7 @@
 # KYC Multi-Step Form
 
-A sleek, user-friendly, and fully functional **multi-step KYC (Know Your Customer)** form built with React! This application guides users through a smooth process of submitting personal details in multiple steps, providing a seamless experience from start to finish. Ideal for applications that require verified user information.
+The **Multi-Step KYC** Form is a user-friendly, responsive application designed for the Know Your Customer (KYC) process. This app guides users through multiple steps to gather essential information for identity verification. With a clean and minimal design, the app ensures smooth navigation across form fields.
+<br>
 
 ## ✨ Features
 
@@ -9,12 +10,16 @@ A sleek, user-friendly, and fully functional **multi-step KYC (Know Your Custome
 - **Data Persistence**: Form data is saved as users proceed, preventing data loss.
 - **Responsive Design**: Works beautifully across devices with a minimal and clean interface.
 
-## **Demo Video**
+<br>
 
-🎥 **Watch the Demo**
+## 🎥 Demo Video
+
+**Watch the Demo**
 Check out how the form works in action, from filling in details to reviewing the summary!
 
 👉 [Watch the Demo](https://www.loom.com/share/b256c5558e684e198018128abd8cfd37?sid=97d12e05-ce09-4da2-b88e-fa519bbfa7c9)
+
+<br>
 
 ## 🖥️ How to Run Locally
 
@@ -46,7 +51,9 @@ To get this project running on your local machine, follow the steps below:
 
    Your app will be live at [http://localhost:3000](http://localhost:3000)!
 
-## 🛠️ Technologies Used
+<br>
+
+## 🔧 Technologies Used
 
 - **React**: For building the interactive user interface.
 - **React Hook Form**: Handling form validation and submission smoothly && validation.
