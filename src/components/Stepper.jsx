@@ -3,6 +3,7 @@ const Stepper = ({ currentStep }) => {
     { label: 'Step 1', description: 'Identity Details' },
     { label: 'Step 2', description: 'Address Details' },
     { label: 'Step 3', description: 'File Upload' },
+    { label: 'Step 4', description: 'Summary' },
   ];
 
   return (
