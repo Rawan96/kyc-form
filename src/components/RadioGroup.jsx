@@ -5,6 +5,7 @@ const RadioGroup = ({
   register,
   errors,
   validationRules,
+  defaultValue,
 }) => {
   const isError = errors && errors[name];
 
@@ -18,6 +19,7 @@ const RadioGroup = ({
               type="radio"
               {...register(name, validationRules)}
               value={option.value}
+              defaultChecked={defaultValue === option.value}
               className="h-4 w-4 text-blue-600 border-gray-300"
             />
             <span className="ml-2">{option.label}</span>

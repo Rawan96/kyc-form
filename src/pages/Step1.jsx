@@ -21,7 +21,10 @@ const Step1 = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="pt-6 space-y-8">
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className="pt-6 space-y-8 transition-all duration-500 ease-in-out transform "
+    >
       <Heading
         title="Personal Information"
         subtitle="Fill in your personal and family details to begin."
@@ -32,6 +35,7 @@ const Step1 = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           <InputField
             id="firstName"
+            defaultValue={formData.firstName || ''}
             label="First Name"
             register={register}
             errors={errors}
@@ -39,6 +43,7 @@ const Step1 = () => {
           />
           <InputField
             id="lastName"
+            defaultValue={formData.lastName || ''}
             label="Last Name"
             register={register}
             errors={errors}
@@ -52,6 +57,7 @@ const Step1 = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           <InputField
             id="fatherFirstName"
+            defaultValue={formData.fatherFirstName || ''}
             label="Father's/Spouse's First Name"
             register={register}
             errors={errors}
@@ -59,6 +65,7 @@ const Step1 = () => {
           />
           <InputField
             id="fatherLastName"
+            defaultValue={formData.fatherLastName || ''}
             label="Father's/Spouse's Last Name"
             register={register}
             errors={errors}
@@ -73,6 +80,7 @@ const Step1 = () => {
           <RadioGroup
             name="gender"
             label="Gender"
+            defaultValue={formData.gender || ''}
             options={[
               { value: 'Male', label: 'Male' },
               { value: 'Female', label: 'Female' },
@@ -84,6 +92,7 @@ const Step1 = () => {
           <RadioGroup
             name="maritalStatus"
             label="Marital Status"
+            defaultValue={formData.maritalStatus || ''}
             options={[
               { value: 'Single', label: 'Single' },
               { value: 'Married', label: 'Married' },
@@ -99,6 +108,7 @@ const Step1 = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         <InputField
           id="dob"
+          defaultValue={formData.dob || ''}
           label="Date of Birth"
           type="date"
           register={register}
@@ -109,6 +119,7 @@ const Step1 = () => {
         <InputField
           type="select"
           label="Country"
+          defaultValue={formData.country || ''}
           id="country"
           options={['India', 'USA', 'Canada', 'Other']}
           register={register}
@@ -120,7 +131,7 @@ const Step1 = () => {
       <div className="mt-8 flex justify-end">
         <button
           type="submit"
-          className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+          className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-[#6366f1] hover:bg-[#6366f1] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#6366f1] w-40"
         >
           Next
         </button>

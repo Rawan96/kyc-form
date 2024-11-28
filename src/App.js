@@ -1,8 +1,9 @@
-import Stepper from './components/Stepper';
 import useFormStore from './context/formStore';
 import Step1 from './pages/Step1';
 import Step2 from './pages/Step2';
 import Step3 from './pages/Step3';
+import Stepper from './components/Stepper';
+import Summary from './pages/Summary';
 
 const App = () => {
   const { step } = useFormStore();
@@ -19,10 +20,46 @@ const App = () => {
             verification.
           </p>
         </div>
-        <Stepper currentStep={step} />
-        {step === 1 && <Step1 />}
-        {step === 2 && <Step2 />}
-        {step === 3 && <Step3 />}
+        {step && <Stepper currentStep={step} />}
+        <div className="relative overflow-hidden h-auto">
+          <div
+            className={`transition-all duration-700 ease-in-out transform ${
+              step === 1
+                ? 'opacity-100 translate-y-0 relative'
+                : 'opacity-0 translate-y-4 absolute pointer-events-none'
+            }`}
+          >
+            <Step1 />
+          </div>
+          <div
+            className={`transition-all duration-700 ease-in-out transform ${
+              step === 2
+                ? 'opacity-100 translate-y-0 relative'
+                : 'opacity-0 translate-y-4 absolute pointer-events-none'
+            }`}
+          >
+            <Step2 />
+          </div>
+          <div
+            className={`transition-all duration-700 ease-in-out transform ${
+              step === 3
+                ? 'opacity-100 translate-y-0 relative'
+                : 'opacity-0 translate-y-4 absolute pointer-events-none'
+            }`}
+          >
+            <Step3 />
+          </div>
+          <div
+            className={`transition-all duration-700 ease-in-out transform ${
+              step === 4
+                ? 'opacity-100 translate-y-0 relative'
+                : 'opacity-0 translate-y-4 absolute pointer-events-none'
+            }`}
+          >
+            <Summary />
+          </div>
+        </div>
+
       </div>
     </div>
   );
