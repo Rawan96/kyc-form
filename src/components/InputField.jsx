@@ -5,6 +5,7 @@ const InputField = ({
   register,
   validationRules,
   errors,
+  defaultValue = '',
   options = [],
 }) => {
   return (
@@ -31,6 +32,7 @@ const InputField = ({
       ) : (
         <input
           id={id}
+          defaultValue={defaultValue}
           type={type}
           {...register(id, validationRules)}
           className="block w-full border border-gray-300 rounded-md bg-white py-3 px-4 text-sm text-gray-700 shadow-sm focus:ring-blue-500 focus:border-blue-500"
